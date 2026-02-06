@@ -1,0 +1,63 @@
+<div id="view_notes" class="d-none">
+  {% include "partials/auth_nav.html" %}
+
+  <div class="d-flex align-items-center mb-2" id="notes_toolbar">
+    <h5 class="mb-0">Notes</h5>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <div id="notes_search_wrap">
+        <input id="notes_search" class="form-control form-control-sm" placeholder="Search notes..." />
+      </div>
+      <button id="btn_note_add" class="btn btn-sm btn-primary">Add</button>
+    </div>
+  </div>
+
+  <div id="note_form_section" class="card mb-3 d-none">
+    <div class="card-header">Note</div>
+    <div class="card-body">
+      <input id="note_id" type="hidden" />
+      <div class="mb-2">
+        <label class="form-label">Title</label>
+        <input id="note_title" class="form-control" />
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Description</label>
+        <textarea id="note_description" class="form-control"></textarea>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Attachment</label>
+        <input id="note_attachment" type="file" class="form-control" />
+      </div>
+      <button id="btn_note_save" class="btn btn-success">Save</button>
+      <button id="btn_note_cancel" class="btn btn-outline-secondary ms-2">Cancel</button>
+    </div>
+  </div>
+
+  <div id="notes_list_section" class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-sm align-middle">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Modified</th>
+              <th>Attachment</th>
+              <th class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="notes_rows"></tbody>
+        </table>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-end gap-2 mt-2">
+        <button id="btn_notes_prev" class="btn btn-sm btn-outline-secondary" type="button" disabled>
+          Prev
+        </button>
+        <span id="notes_page_label" class="small text-muted">Page 1</span>
+        <button id="btn_notes_next" class="btn btn-sm btn-outline-secondary" type="button" disabled>
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

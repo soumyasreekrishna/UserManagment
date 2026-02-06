@@ -1,0 +1,44 @@
+<div id="view_profile" class="d-none">
+  {% include "partials/auth_nav.html" %}
+
+  <div class="card">
+    <div class="card-header d-flex align-items-center">
+      <span>Profile</span>
+      <button id="btn_profile_edit" class="btn btn-sm btn-outline-primary ms-auto" type="button">
+        <i class="bi bi-pencil"></i>
+      </button>
+    </div>
+    <div class="card-body">
+      <div class="mb-2">
+        <label class="form-label">Email</label>
+        <input id="profile_email" class="form-control" disabled />
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Full name</label>
+        <input id="profile_full_name" class="form-control" disabled />
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Date of birth</label>
+        <input id="profile_dob" type="date" class="form-control" disabled />
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Address</label>
+        <textarea id="profile_address" class="form-control" disabled></textarea>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Gender</label>
+        <select id="profile_gender" class="form-select" disabled>
+          <option value="">--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Mobile number</label>
+        <input id="profile_mobile" class="form-control" disabled />
+      </div>
+      <button id="btn_update_profile" class="btn btn-primary d-none">Update Profile</button>
+    </div>
+  </div>
+</div>
